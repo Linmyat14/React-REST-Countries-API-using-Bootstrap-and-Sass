@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
+
+// Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+
+$info:  hsl(209, 23%, 22%);
+$dark: hsl(207, 26%, 17%);
+$white: hsl(0, 0%, 100%);
+$light: hsl(0, 0%, 98%);
+$form-select-indicator-color: $dark;
+$form-select-bg: $white;
+$input-bg: $dark;
+$form-select-padding-x: 1rem;
+$form-select-padding-y: 0.8rem;
+$form-select-focus-border-color: $info;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav button {
+ color: $dark;
+}
+nav button:hover {
+    opacity: 0.8;
+}
+.country-card a {
+    color: $dark;
+    text-decoration: none;
+}
+.country-card{
+    box-shadow: 0px 3px 6px 0px rgba(140, 149, 159, 0.15);
+    width: 250px;
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-radius: 0 0 5px 5px;
+    background-color: $white;
+}
+.country-img {
+    width: 250px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.country-card-info p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.info-text{
+    font-weight: 600;
+    font-size: 15px;
+}
+.search-and-filter {
+    display: flex;
+}
+.search input {
+    background-color: $white;
+}
+.search-input input {
+    width: 500px;
+    height: 50px;
+}
+.select-region {
+    margin-left: auto;
+}
+.select-region-dark {
+    margin-left: auto;
+}
+.select-box {
+    background-color: $white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    margin-top: 3rem;
+}
+.select-box>option{
+    border-radius: 5px;
+}
+.back-btn {
+    background-color: $white;
+    color: $dark;
+    font-weight: bold;
+    border: none;
+    padding: 6px 25px;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+.back-btn:hover{
+    transform: scale(0.95);
+}
+.country-info-img{
+    width: 160%;
+    height: 100%;
+    object-fit: contain;
+}
+.country-info-page {
+    display: flex;
+    justify-content: start;
+    font-weight: 600;
+}
+.info-section {
+    margin-left: 300px;
+}
+.country-info .border-countries {
+    border: 1px solid rgb(236, 217, 217);
+}
+.info-details {
+    display: flex;
+}
+.error-page {
+    background-color: $light;
+}
+// Media Queries
+@media screen and (max-width: 992px){
+    .search-input input {
+        width: 300px;
+    }
+    .country-info-page {
+        flex-direction: column;
+        margin: 0 30px;
+    }
+    .country-info-img {
+        width: 80%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    .info-section {
+        margin-left: 0;
+    }
+    .info-details {
+        flex-direction: column;
+    }
+    .first-col {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .search-and-filter {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+     .search-input input {
+        width: 250px;
+    }
+    .select-region {
+        margin: auto;
+    }
+    .select-region-dark {
+        margin: auto;
+    }
+    .select-box {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .country-info-page {
+        flex-direction: column;
+        margin: 0 30px;
+    }
+    .country-info-img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    .info-section {
+        margin-left: 0;
+    }
+    .info-details {
+        flex-direction: column;
+    }
+    .first-col {
+        margin-bottom: 30px;
+    }
+}
+
+// Dark Mode Theme
+nav.dark button {
+    color: white;
+}
+.search-dark .search-input {
+    background-color: $info;
+}
+.search-dark i {
+    color: $white;
+}
+.search-dark input::placeholder{
+    color: white;
+}
+.select-region-dark .select-box{
+    background-color: $info;
+    color: $white;
+}
+.country-dark .country-card {
+    background-color: $info;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11);
+}
+.country-dark .country-info {
+    color: $white;
+}
+.country-info-dark .back-btn {
+    background-color: $info;
+    color: $white;
+}
+.country-info-dark .info-section {
+    color: $light;
+}
+.country-info-dark .info-data {
+    font-weight: 300;
+}
+.country-info-dark .border-countries {
+    background-color: $info;
+}
+.error-page-dark {
+    color: $white;
+}
+.error-page-dark .back-btn {
+    background-color: $info;
+    color: $white;
+}
+
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
